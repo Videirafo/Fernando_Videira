@@ -1,0 +1,50 @@
+name: Portfolio Quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required documentation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s README.md
+          test -s Em_desenvolvimento/README.md
+          test -s docs/ENGINEERING.md
+          test -s docs/DOCUMENTATION_STANDARD.md
+          test -s .github/pull_request_template.md
+
+      - name: Check internal README targets
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in \
+            Em_desenvolvimento/README.md \
+            docs/ENGINEERING.md \
+            docs/DOCUMENTATION_STANDARD.md
+          do
+            test -f "$file"
+          done
+
+      - name: Scan for common committed secret patterns
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE --exclude-dir=.git \
+            '(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-proj-[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16})' .; then
+            echo 'Potential secret pattern detected.'
+            exit 1
+          fi
+          echo 'No common secret patterns detected.'
