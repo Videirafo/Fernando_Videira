@@ -180,6 +180,36 @@ Veja também: **[Em desenvolvimento](./Em_desenvolvimento/README.md)**
 
 ---
 
+## Knowledge Base · Skills de engenharia
+
+Além dos projetos, mantenho uma base pública de habilidades reutilizáveis criadas e refinadas durante o desenvolvimento real de sistemas.
+
+### Sistema mestre
+
+**[VIDEIRA OMEGA STUDIO OS](./skills/VIDEIRA_OMEGA_STUDIO_OS.md)**
+
+```text
+RECALL → CLASSIFY → DISCOVER → GROUND → SPECIFY → DESIGN → PLAN
+→ ISSUE/BRANCH → BUILD → TEST → REVIEW → SHIP → OBSERVE → LEARN → REMEMBER
+```
+
+### Skills especializadas
+
+| Skill | Conhecimento |
+|---|---|
+| [SYSTEM-MODELING-2026](./skills/SYSTEM_MODELING_2026.md) | requisitos, Caso de Uso, UML, BPMN, C4, ERD, ADR e contratos |
+| [PY-BACKEND-2026](./skills/PYTHON_BACKEND_2026.md) | Django/DRF, FastAPI, APIs, segurança, testes e deploy |
+| [GITHUB-PRO-2026](./skills/GITHUB_PORTFOLIO_OS_2026.md) | GitHub Flow, README, portfólio e qualidade de repositório |
+| [AI Agent Engineering](./skills/AI_AGENT_ENGINEERING.md) | agentes, RAG, GraphRAG, tools, MCP/A2A, guardrails e avaliação |
+| [Execution & Project Memory](./skills/EXECUTION_PROJECT_MEMORY.md) | Project Studio, COHI, PM26/PACREF, Focus Execution e Second Brain |
+| [Frontend Product Experience](./skills/FRONTEND_PRODUCT_EXPERIENCE.md) | React/Next.js, mobile-first, acessibilidade, UI/UX e performance |
+| [VPS & Production Engineering](./skills/VPS_PRODUCTION_ENGINEERING.md) | Linux, Docker, Nginx, deploy, backup, rollback e observabilidade |
+| [Game Studio Mobile](./skills/GAME_STUDIO_MOBILE.md) | game design, arquitetura mobile, save, economia, monetização e publicação |
+
+**[Abrir catálogo completo de skills →](./skills/README.md)**
+
+---
+
 ## Princípios de execução
 
 ```text
@@ -212,6 +242,7 @@ docs/
 ├── api/
 └── operations/
 
+skills/
 src/
 tests/
 README.md
@@ -255,9 +286,11 @@ Estou consolidando conhecimentos e projetos nas seguintes frentes:
 
 ## Documentação deste portfólio
 
+- [Base de conhecimento e skills](./skills/README.md)
 - [Projetos em desenvolvimento](./Em_desenvolvimento/README.md)
 - [Arquitetura e engenharia](./docs/ENGINEERING.md)
 - [Sistema de documentação](./docs/DOCUMENTATION_STANDARD.md)
+- [README preparado para o perfil GitHub](./PROFILE_README.md)
 
 ---
 
