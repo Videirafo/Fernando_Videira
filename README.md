@@ -210,6 +210,37 @@ RECALL → CLASSIFY → DISCOVER → GROUND → SPECIFY → DESIGN → PLAN
 
 ---
 
+## Open Source & GitHub Growth
+
+O objetivo não é acumular atividade artificial. A estratégia é usar GitHub como evidência pública de engenharia.
+
+```text
+Projetos públicos úteis
+→ Issues bem especificadas
+→ PRs pequenos e verificáveis
+→ CI verde
+→ contribuições externas
+→ colaboração real
+→ releases
+→ usuários / stars orgânicas
+```
+
+### Frentes atuais
+
+- **Achievements e badges:** critérios atuais, tiers e caminhos oficiais.
+- **Open source externo:** Next.js, Supabase, FastAPI, Django e n8n.
+- **Projeto público autoral:** preparação de um `SaaS Engineering Playbook` e ativos complementares.
+- **Developer Program:** futura integração pública usando GitHub API.
+
+Documentos:
+
+- [GitHub Growth Roadmap](./docs/GITHUB_GROWTH_2026.md)
+- [Achievements & Badges 2026](./docs/ACHIEVEMENTS_AND_BADGES_2026.md)
+- [Open Source Targets — agosto/2026](./docs/OPEN_SOURCE_TARGETS_2026-08.md)
+- [Public Project Strategy](./docs/PUBLIC_PROJECT_STRATEGY.md)
+
+---
+
 ## Princípios de execução
 
 ```text
@@ -281,6 +312,8 @@ Estou consolidando conhecimentos e projetos nas seguintes frentes:
 - segurança e observabilidade
 - documentação como código
 - CI/CD e engenharia de plataforma
+- contribuição open source
+- integrações com GitHub API
 
 ---
 
@@ -290,6 +323,7 @@ Estou consolidando conhecimentos e projetos nas seguintes frentes:
 - [Projetos em desenvolvimento](./Em_desenvolvimento/README.md)
 - [Arquitetura e engenharia](./docs/ENGINEERING.md)
 - [Sistema de documentação](./docs/DOCUMENTATION_STANDARD.md)
+- [GitHub Growth Roadmap](./docs/GITHUB_GROWTH_2026.md)
 - [README preparado para o perfil GitHub](./PROFILE_README.md)
 
 ---
