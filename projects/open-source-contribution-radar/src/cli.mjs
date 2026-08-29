@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { writeFile } from "node:fs/promises";
+import { pathToFileURL } from "node:url";
 import { GitHubClient, GitHubApiError, buildSearchQuery } from "./github.mjs";
 import { rankIssues } from "./rank.mjs";
 import { formatJson, formatMarkdown, formatText } from "./format.mjs";
@@ -116,7 +117,11 @@ export async function main(argv = process.argv.slice(2), { client = new GitHubCl
   return 0;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+const isDirectExecution = process.argv[1]
+  ? import.meta.url === pathToFileURL(process.argv[1]).href
+  : false;
+
+if (isDirectExecution) {
   main().then(
     (code) => { process.exitCode = code; },
     (error) => {
