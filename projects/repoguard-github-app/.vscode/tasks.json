@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "RepoGuard: tests", "type": "shell", "command": "npm test", "group": "test", "problemMatcher": [] },
+    { "label": "RepoGuard: syntax check", "type": "shell", "command": "npm run check", "group": "build", "problemMatcher": [] },
+    { "label": "RepoGuard: start", "type": "shell", "command": "npm start", "isBackground": true, "problemMatcher": [] }
+  ]
+}
