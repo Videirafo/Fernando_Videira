@@ -1,0 +1,46 @@
+name: Tenant Isolation Verifier
+
+on:
+  pull_request:
+    paths:
+      - 'projects/tenant-isolation-verifier/**'
+      - '.github/workflows/tenant-isolation-verifier.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'projects/tenant-isolation-verifier/**'
+      - '.github/workflows/tenant-isolation-verifier.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/tenant-isolation-verifier
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: npm install --ignore-scripts
+      - run: npm run check
+      - run: npm test
+      - name: Verify safe and vulnerable demos
+        run: |
+          set -euo pipefail
+          npm run demo > /tmp/tenant-demo.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:3456/health >/dev/null; then break; fi
+            sleep 0.25
+          done
+          npm run verify:safe
+          set +e
+          npm run verify:vulnerable
+          code=$?
+          set -e
+          test "$code" -eq 2
