@@ -1,5 +1,7 @@
 # GitHub Repo Health Auditor
 
+[![Repo Health Auditor](https://github.com/Videirafo/Fernando_Videira/actions/workflows/repo-health-auditor.yml/badge.svg?branch=main)](https://github.com/Videirafo/Fernando_Videira/actions/workflows/repo-health-auditor.yml)
+
 CLI em Python para auditar a saúde de repositórios públicos usando a **REST API oficial do GitHub**.
 
 O projeto mantém duas métricas separadas:
@@ -84,42 +86,19 @@ Abra diretamente a pasta do projeto:
 code .
 ```
 
-A pasta `.vscode/` inclui:
-
-- task `Install dev dependencies`;
-- task `Run tests`;
-- task `Audit this portfolio`;
-- launch config `Debug Repo Health Auditor`;
-- recomendações de extensões Python.
+A pasta `.vscode/` inclui tasks de instalação, testes e auditoria, launch config e recomendações Python.
 
 ## Exemplos
 
-### Terminal
-
 ```bash
 repo-health Videirafo/SaaS-Engineering-Playbook
-```
-
-### Markdown
-
-```bash
-repo-health Videirafo/SaaS-Engineering-Playbook \
-  --format markdown \
-  --output report.md
-```
-
-### JSON
-
-```bash
-repo-health https://github.com/Videirafo/AI-Agent-Production-Checklist \
-  --format json
+repo-health Videirafo/SaaS-Engineering-Playbook --format markdown --output report.md
+repo-health https://github.com/Videirafo/AI-Agent-Production-Checklist --format json
 ```
 
 ## Token opcional
 
 Para repositórios públicos o projeto funciona sem token. Para autenticar, defina a variável somente no ambiente local.
-
-Linux / macOS:
 
 ```bash
 export GH_TOKEN="seu_token_local"
@@ -135,8 +114,6 @@ $env:GH_TOKEN="seu_token_local"
 
 ## Engineering Score
 
-O score próprio soma 100 pontos:
-
 | Sinal | Pontos |
 |---|---:|
 | README | 15 |
@@ -151,17 +128,9 @@ O score próprio soma 100 pontos:
 | Topics | 5 |
 | Repository active | 5 |
 
-Grades:
+Grades: `A ≥ 90`, `B ≥ 80`, `C ≥ 70`, `D ≥ 60`, `E < 60`.
 
-```text
-A ≥ 90
-B ≥ 80
-C ≥ 70
-D ≥ 60
-E < 60
-```
-
-Esse score **não é uma métrica oficial do GitHub**. Ele é deliberadamente simples, auditável e separado do `health_percentage` oficial.
+Esse score **não é uma métrica oficial do GitHub**.
 
 ## Testes
 
@@ -175,7 +144,6 @@ Os testes usam `httpx.MockTransport`, portanto não fazem chamadas reais ao GitH
 
 ```bash
 git switch -c feat/minha-melhoria
-# altere o projeto
 pytest
 git add .
 git commit -m "feat: minha melhoria"
@@ -183,13 +151,6 @@ git push -u origin feat/minha-melhoria
 ```
 
 Depois abra um Pull Request.
-
-## Referências oficiais
-
-- GitHub REST API — community metrics;
-- GitHub REST API — best practices;
-- GitHub REST API — rate limits;
-- GitHub community health files.
 
 ## Segurança
 
