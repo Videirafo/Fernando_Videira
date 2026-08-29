@@ -1,5 +1,7 @@
 # Tenant Isolation Verifier Lab
 
+[![Tenant Isolation Verifier](https://github.com/Videirafo/Fernando_Videira/actions/workflows/tenant-isolation-verifier.yml/badge.svg?branch=main)](https://github.com/Videirafo/Fernando_Videira/actions/workflows/tenant-isolation-verifier.yml)
+
 Laboratório defensivo e **localhost-only** para demonstrar como testes automatizados detectam Broken Object Level Authorization (BOLA) e vazamento cross-tenant em APIs SaaS.
 
 > O projeto não escaneia sites externos, não enumera IDs e não usa credenciais reais. Ele executa somente contra a API fictícia local incluída no próprio repositório.
@@ -38,21 +40,14 @@ cd projects/tenant-isolation-verifier
 npm run demo
 ```
 
-Terminal 2 — implementação segura:
+Terminal 2:
 
 ```bash
 npm run verify:safe
-```
-
-Resultado esperado: `PASS`, 4/4 casos.
-
-Implementação vulnerável de ensino:
-
-```bash
 npm run verify:vulnerable
 ```
 
-Resultado esperado: exit code `2`, com dois findings `cross-tenant-data-leak`.
+A implementação segura deve retornar `PASS`, 4/4. A vulnerável de ensino deve sair com código `2` e findings `cross-tenant-data-leak`.
 
 ## Matriz
 
@@ -63,11 +58,9 @@ Resultado esperado: exit code `2`, com dois findings `cross-tenant-data-leak`.
 | alpha | beta | negar |
 | beta | alpha | negar |
 
-O verifier falha também se uma resposta expuser `tenant_id` diferente do ator.
-
 ## Guardrail de segurança
 
-A função de verificação rejeita qualquer `base-url` cujo hostname não seja `127.0.0.1`, `localhost` ou loopback IPv6. Isso mantém o projeto como laboratório defensivo reproduzível, não como scanner de terceiros.
+A verificação rejeita qualquer `base-url` cujo hostname não seja loopback. O projeto é um laboratório defensivo reproduzível, não um scanner de terceiros.
 
 ## Testes
 
@@ -76,7 +69,7 @@ npm test
 npm run check
 ```
 
-Os testes sobem o servidor local em porta efêmera, provam que o endpoint seguro passa, provam que o endpoint vulnerável é detectado e validam a recusa de host remoto.
+Os testes sobem o servidor local em porta efêmera, provam a implementação segura, detectam a vulnerável e validam a recusa de host remoto.
 
 ## VS Code
 
@@ -84,17 +77,17 @@ Os testes sobem o servidor local em porta efêmera, provam que o endpoint seguro
 code projects/tenant-isolation-verifier
 ```
 
-Há tasks para iniciar a demo API, executar a matriz segura/vulnerável e rodar testes, além de configurações Run/Debug.
+Há tasks para iniciar a demo API, executar as matrizes e rodar testes, além de Run/Debug.
 
-## Como aplicar em um SaaS real
+## Aplicação em SaaS real
 
-Em um projeto real, a mesma ideia deve ser incorporada ao test suite da aplicação com identidades de teste próprias e dados sintéticos:
+Use identidades e dados sintéticos para testar:
 
 ```text
 owner/admin/member
 × tenant A/tenant B
 × read/create/update/delete
-× object IDs válidos e de outro tenant
+× object IDs próprios e de outro tenant
 ```
 
-Nunca use dados reais de clientes para esse tipo de teste automatizado.
+Nunca use dados reais de clientes nesse tipo de teste automatizado.
