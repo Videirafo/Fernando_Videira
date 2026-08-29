@@ -1,0 +1,14 @@
+{
+  "name": "mcp-policy-firewall-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "check": "node --check src/cli.mjs && node --check src/policy.mjs && node --check src/report.mjs",
+    "test": "node --test",
+    "demo:allow": "node src/cli.mjs --policy examples/policy.json --request examples/request-allowed.json --format text",
+    "demo:deny": "node src/cli.mjs --policy examples/policy.json --request examples/request-denied.json --format text",
+    "demo:approval": "node src/cli.mjs --policy examples/policy.json --request examples/request-payment.json --approved --format json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug MCP Policy Firewall (allow demo)",
+      "program": "${workspaceFolder}/src/cli.mjs",
+      "cwd": "${workspaceFolder}",
+      "args": ["--policy", "examples/policy.json", "--request", "examples/request-allowed.json", "--format", "text"]
+    }
+  ]
+}

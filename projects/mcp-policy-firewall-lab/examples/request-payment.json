@@ -1,0 +1,12 @@
+{
+  "jsonrpc": "2.0",
+  "id": "demo-3",
+  "method": "tools/call",
+  "params": {
+    "name": "payments.create",
+    "arguments": {
+      "amount": 50,
+      "currency": "USD"
+    }
+  }
+}
