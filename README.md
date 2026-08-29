@@ -1,69 +1,35 @@
-<div align="center">
+<p align="center"><img src="./assets/banner.svg" alt="Fernando Videira engineering portfolio" width="100%" /></p>
 
-# Fernando Videira
+# Engineering Portfolio & Knowledge Base
 
-### Software Engineering · SaaS · AI Agents · Full Stack · DevOps
+Portfólio técnico aprofundado para organizar **projetos, arquitetura, skills reutilizáveis, decisões de engenharia e evolução open source**.
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=21&pause=1000&center=true&vCenter=true&width=900&lines=Building+production-ready+software;Multi-tenant+SaaS+%7C+AI+Agents+%7C+Automation;Architecture+%7C+APIs+%7C+Observability+%7C+DevOps;Requirements+%E2%86%92+Build+%E2%86%92+Test+%E2%86%92+Ship+%E2%86%92+Observe)](https://git.io/typing-svg)
+> O objetivo deste repositório é mostrar evidência técnica e método de trabalho, sem expor código privado, credenciais, clientes ou infraestrutura sensível.
 
-**Transformando problemas reais em sistemas organizados, testáveis e prontos para evoluir.**
-
-</div>
-
----
-
-## Sobre mim
-
-Atuo em engenharia de software com foco em construir produtos digitais completos, do levantamento do problema ao deploy e à operação.
-
-Meu fluxo de trabalho prioriza:
+## Engenharia
 
 ```text
 REQUIREMENTS → ARCHITECTURE → BUILD → TEST → REVIEW → SHIP → OBSERVE → IMPROVE
 ```
 
-Áreas de maior interesse e prática:
+Atuação e estudo concentrados em:
 
-- SaaS multi-tenant
-- agentes de IA e automação conversacional
-- WhatsApp / Instagram e atendimento omnichannel
-- CRM, agenda e fluxos operacionais
-- APIs e integrações
-- infraestrutura Linux/VPS
-- modelagem de software com UML, C4 e BPMN
-- testes, segurança, acessibilidade e observabilidade
-
----
+- SaaS multi-tenant;
+- AI Agents, RAG, tools, guardrails e automação;
+- CRM, agenda e atendimento omnichannel;
+- APIs e integrações;
+- Next.js / React / TypeScript;
+- Node.js e Python;
+- PostgreSQL / Supabase / Redis;
+- Linux / Docker / Nginx / CI/CD;
+- UML / BPMN / C4 / ADR / OpenAPI / AsyncAPI;
+- testes, segurança, acessibilidade e observabilidade.
 
 ## Stack de engenharia
 
-### Frontend
+<p align="center"><img src="./assets/stack-map.svg" alt="Engineering stack map" width="100%" /></p>
 
-<p>
-  <img src="https://skillicons.dev/icons?i=nextjs,react,ts,js,html,css,tailwind" alt="Frontend stack" />
-</p>
-
-### Backend, dados e APIs
-
-<p>
-  <img src="https://skillicons.dev/icons?i=nodejs,python,postgres,supabase,redis" alt="Backend and data stack" />
-</p>
-
-### Infraestrutura e entrega
-
-<p>
-  <img src="https://skillicons.dev/icons?i=docker,nginx,linux,git,github,githubactions,vercel" alt="Infrastructure stack" />
-</p>
-
-### Backend Python em evolução
-
-<p>
-  <img src="https://skillicons.dev/icons?i=django,fastapi" alt="Python backend" />
-</p>
-
-Estudo e aplicação de padrões modernos de **Django/DRF** e **FastAPI**, com foco em APIs, autenticação, service layer, testes, documentação OpenAPI e deploy ASGI.
-
----
+> **Python backend está em evolução contínua**, com Django/DRF e FastAPI aplicados a APIs, autenticação, services, testes, OpenAPI e execução ASGI.
 
 ## O que eu construo
 
@@ -78,68 +44,20 @@ Estudo e aplicação de padrões modernos de **Django/DRF** e **FastAPI**, com f
 | **DevOps** | VPS, Linux, Nginx, Docker, CI/CD, deploy, backup e rollback |
 | **Quality** | testes, segurança, acessibilidade, logs, métricas e observabilidade |
 
----
+## Projetos públicos principais
 
-## Engenharia de requisitos e arquitetura
+### [SaaS Engineering Playbook](https://github.com/Videirafo/SaaS-Engineering-Playbook)
+Manual público para arquitetura SaaS, multi-tenancy, segurança, APIs, testes, observabilidade e produção.
 
-Documentação faz parte do sistema. O objetivo é manter especificação e implementação sincronizadas.
+### [AI Agent Production Checklist](https://github.com/Videirafo/AI-Agent-Production-Checklist)
+Checklist de produção para guardrails, tool policies, RAG/memória, evals, tracing, approvals e incident response.
 
-```mermaid
-flowchart LR
-    A[Problema] --> B[Requisitos]
-    B --> C[Regras de negócio]
-    C --> D[Casos de uso]
-    D --> E[UML / BPMN / C4]
-    E --> F[Dados e contratos]
-    F --> G[Implementação]
-    G --> H[Testes]
-    H --> I[Deploy]
-    I --> J[Observabilidade]
-    J --> B
-```
+### [System Modeling Starter](https://github.com/Videirafo/System-Modeling-Starter)
+Starter para requirements, UML, BPMN, C4, ERD, ADR, OpenAPI, AsyncAPI e rastreabilidade.
 
-Artefatos que uso e estudo:
+## Cases de engenharia
 
-- Casos de Uso e especificações textuais
-- Activity, Sequence, State e Class diagrams
-- C4 System Context, Container e Component
-- BPMN para processos de negócio
-- ERD e modelo relacional
-- OpenAPI / AsyncAPI
-- Architecture Decision Records
-- rastreabilidade requisito → código → teste
-
----
-
-## IA e automação
-
-```text
-AI Engineering
-├── LLM orchestration
-├── RAG / GraphRAG
-├── tool calling
-├── MCP / agent interoperability
-├── guardrails
-├── conversation memory
-├── human handoff
-├── evaluation
-└── observability
-```
-
-Interesses de engenharia relacionados:
-
-- automação de workflows
-- agentes para atendimento e operação
-- CRM e mensageria
-- processamento assíncrono
-- eventos e integrações
-- logs estruturados e auditoria
-
----
-
-## Projetos e cases em desenvolvimento
-
-> Parte dos projetos de produto permanece em repositórios privados. Aqui são apresentados somente escopo e decisões de engenharia, sem código, segredos ou dados sensíveis.
+Parte dos produtos permanece em repositórios privados. Aqui são documentados apenas escopo e decisões sanitizadas.
 
 ### MarcaIA
 
@@ -149,40 +67,20 @@ Interesses de engenharia relacionados:
 
 Foco de engenharia:
 
-- onboarding multi-tenant
-- agenda e marcação inteligente
-- serviços e profissionais
-- atendimento WhatsApp / Instagram
-- CRM operacional
-- autenticação e isolamento de dados
-- arquitetura preparada para agentes de IA
-- deploy, observabilidade e evolução por GitHub Flow
+- onboarding multi-tenant;
+- agenda e marcação inteligente;
+- serviços e profissionais;
+- atendimento WhatsApp / Instagram;
+- CRM operacional;
+- autenticação e isolamento de dados;
+- arquitetura preparada para agentes;
+- deploy, observabilidade e GitHub Flow.
 
-### AI Agents & Automation Lab
+Veja também: **[Em desenvolvimento](./Em_desenvolvimento/README.md)**.
 
-Pesquisa e prototipação de arquiteturas para agentes de produção:
+## Knowledge Base
 
-- WhatsApp / Instagram agents
-- RAG e recuperação contextual
-- workflows e orquestração
-- Chatwoot / CRM handoff
-- guardrails
-- logs e avaliação
-- APIs oficiais e integrações
-
-### Software Modeling 2026
-
-Sistema de engenharia para transformar requisitos em implementação verificável:
-
-`Requirements` → `Use Cases` → `UML` → `BPMN` → `C4` → `API Contracts` → `ADRs` → `Tests`
-
-Veja também: **[Em desenvolvimento](./Em_desenvolvimento/README.md)**
-
----
-
-## Knowledge Base · Skills de engenharia
-
-Além dos projetos, mantenho uma base pública de habilidades reutilizáveis criadas e refinadas durante o desenvolvimento real de sistemas.
+<p align="center"><img src="./assets/knowledge-map.svg" alt="Knowledge base map" width="100%" /></p>
 
 ### Sistema mestre
 
@@ -208,11 +106,51 @@ RECALL → CLASSIFY → DISCOVER → GROUND → SPECIFY → DESIGN → PLAN
 
 **[Abrir catálogo completo de skills →](./skills/README.md)**
 
----
+## Engenharia de requisitos e arquitetura
+
+```mermaid
+flowchart LR
+    A[Problema] --> B[Requisitos]
+    B --> C[Regras de negócio]
+    C --> D[Casos de uso]
+    D --> E[UML / BPMN / C4]
+    E --> F[Dados e contratos]
+    F --> G[Implementação]
+    G --> H[Testes]
+    H --> I[Deploy]
+    I --> J[Observabilidade]
+    J --> B
+```
+
+Artefatos utilizados conforme necessidade:
+
+- Casos de Uso e especificações textuais;
+- UML Activity, Sequence, State e Class;
+- C4 Context, Container e Component;
+- BPMN;
+- ERD e modelo relacional;
+- OpenAPI / AsyncAPI;
+- Architecture Decision Records;
+- rastreabilidade requisito → código → teste.
+
+## AI Engineering
+
+```text
+AI Engineering
+├── LLM orchestration
+├── RAG / GraphRAG
+├── tool calling
+├── MCP / agent interoperability
+├── guardrails
+├── conversation memory
+├── human handoff
+├── evaluation
+└── observability
+```
 
 ## Open Source & GitHub Growth
 
-O objetivo não é acumular atividade artificial. A estratégia é usar GitHub como evidência pública de engenharia.
+A estratégia é transformar GitHub em evidência pública de engenharia, sem atividade artificial.
 
 ```text
 Projetos públicos úteis
@@ -225,21 +163,12 @@ Projetos públicos úteis
 → usuários / stars orgânicas
 ```
 
-### Frentes atuais
-
-- **Achievements e badges:** critérios atuais, tiers e caminhos oficiais.
-- **Open source externo:** Next.js, Supabase, FastAPI, Django e n8n.
-- **Projeto público autoral:** preparação de um `SaaS Engineering Playbook` e ativos complementares.
-- **Developer Program:** futura integração pública usando GitHub API.
-
 Documentos:
 
 - [GitHub Growth Roadmap](./docs/GITHUB_GROWTH_2026.md)
 - [Achievements & Badges 2026](./docs/ACHIEVEMENTS_AND_BADGES_2026.md)
 - [Open Source Targets — agosto/2026](./docs/OPEN_SOURCE_TARGETS_2026-08.md)
 - [Public Project Strategy](./docs/PUBLIC_PROJECT_STRATEGY.md)
-
----
 
 ## Princípios de execução
 
@@ -255,82 +184,34 @@ Backup and rollback before risky changes
 Architecture decisions are recorded
 ```
 
----
+## Segurança e privacidade
 
-## Padrão de repositório
+Este portfólio público não deve conter:
 
-```text
-.github/
-├── ISSUE_TEMPLATE/
-├── workflows/
-└── pull_request_template.md
+- senhas, tokens ou API keys;
+- `.env` reais;
+- chaves SSH/privadas;
+- IPs ou endpoints internos sensíveis;
+- dados de clientes;
+- dumps de bancos;
+- conversas privadas;
+- código proprietário de repositórios privados.
 
-docs/
-├── architecture/
-├── requirements/
-├── diagrams/
-├── adr/
-├── api/
-└── operations/
+Consulte [SECURITY.md](./SECURITY.md).
 
-skills/
-src/
-tests/
-README.md
-ARCHITECTURE.md
-SECURITY.md
-CONTRIBUTING.md
-CHANGELOG.md
-LICENSE
-```
-
-Esse baseline é adaptado ao tamanho e à finalidade de cada projeto — sem criar documentação apenas por aparência.
-
----
-
-## GitHub
-
-<div align="center">
-
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=Videirafo&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=github" alt="GitHub stats" />
-
-<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Videirafo&layout=compact&hide_border=true&langs_count=10" alt="Top languages" />
-
-</div>
-
----
-
-## Direção atual
-
-Estou consolidando conhecimentos e projetos nas seguintes frentes:
-
-- arquitetura de SaaS multi-tenant
-- Python backend com Django e FastAPI
-- agentes de IA em produção
-- engenharia mobile
-- APIs e sistemas orientados a eventos
-- segurança e observabilidade
-- documentação como código
-- CI/CD e engenharia de plataforma
-- contribuição open source
-- integrações com GitHub API
-
----
-
-## Documentação deste portfólio
+## Documentação
 
 - [Base de conhecimento e skills](./skills/README.md)
 - [Projetos em desenvolvimento](./Em_desenvolvimento/README.md)
 - [Arquitetura e engenharia](./docs/ENGINEERING.md)
 - [Sistema de documentação](./docs/DOCUMENTATION_STANDARD.md)
 - [GitHub Growth Roadmap](./docs/GITHUB_GROWTH_2026.md)
-- [README preparado para o perfil GitHub](./PROFILE_README.md)
 
 ---
 
 <div align="center">
 
-### Build · Test · Ship · Observe · Improve
+**Build · Test · Ship · Observe · Improve**
 
 `Software Engineering` · `SaaS` · `AI Agents` · `Full Stack` · `DevOps`
 
