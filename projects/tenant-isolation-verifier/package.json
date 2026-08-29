@@ -1,0 +1,14 @@
+{
+  "name": "tenant-isolation-verifier",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "check": "node --check src/demo-server.mjs && node --check src/verifier.mjs && node --check src/cli.mjs",
+    "test": "node --test",
+    "demo": "node src/demo-server.mjs",
+    "verify:safe": "node src/cli.mjs --target safe",
+    "verify:vulnerable": "node src/cli.mjs --target vulnerable"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Tenant Lab: tests", "type": "shell", "command": "npm test", "group": "test", "problemMatcher": [] },
+    { "label": "Tenant Lab: start demo API", "type": "shell", "command": "npm run demo", "isBackground": true, "problemMatcher": [] },
+    { "label": "Tenant Lab: verify safe", "type": "shell", "command": "npm run verify:safe", "group": "build", "problemMatcher": [] },
+    { "label": "Tenant Lab: verify vulnerable", "type": "shell", "command": "npm run verify:vulnerable", "group": "build", "problemMatcher": [] }
+  ]
+}
