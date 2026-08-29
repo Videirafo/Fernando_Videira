@@ -55,6 +55,32 @@ Checklist de produção para guardrails, tool policies, RAG/memória, evals, tra
 ### [System Modeling Starter](https://github.com/Videirafo/System-Modeling-Starter)
 Starter para requirements, UML, BPMN, C4, ERD, ADR, OpenAPI, AsyncAPI e rastreabilidade.
 
+## Clone & Build · projetos executáveis
+
+Além da documentação, os três repositórios principais possuem exemplos que podem ser **clonados, abertos no VS Code, executados, testados e evoluídos com Git**.
+
+| Projeto | Stack | O que demonstra | Validação |
+|---|---|---|---|
+| [SaaS Tenant Dashboard](https://github.com/Videirafo/SaaS-Engineering-Playbook/tree/main/examples/saas-tenant-dashboard) | Next.js · React · TypeScript | rota por tenant, UI, API health e organização de SaaS | typecheck + production build no GitHub Actions |
+| [Safe Agent API](https://github.com/Videirafo/AI-Agent-Production-Checklist/tree/main/examples/safe-agent-api) | Python · FastAPI · pytest | tenant isolation, approval gate e bloqueio de tool destrutiva | pytest no GitHub Actions |
+| [Booking Reference System](https://github.com/Videirafo/System-Modeling-Starter/tree/main/examples/booking-reference-system) | Python · FastAPI · pytest · Mermaid | requisito → regra → API → teste → rastreabilidade | instalação + pytest no GitHub Actions |
+
+Fluxo esperado para quem quiser estudar ou contribuir:
+
+```text
+git clone
+→ code .
+→ Run / Debug ou task do VS Code
+→ build / testes
+→ git switch -c feat/minha-mudanca
+→ git add .
+→ git commit
+→ git push
+→ Pull Request
+```
+
+Cada exemplo contém README próprio, `.gitignore`, configuração `.vscode/`, comandos de execução e quality gate no CI. Nenhum deles depende de credenciais privadas para o fluxo básico.
+
 ## Cases de engenharia
 
 Parte dos produtos permanece em repositórios privados. Aqui são documentados apenas escopo e decisões sanitizadas.
