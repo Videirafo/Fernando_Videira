@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Radar: tests",
+      "type": "shell",
+      "command": "npm test",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Radar: syntax check",
+      "type": "shell",
+      "command": "npm run check",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Radar: good first issues",
+      "type": "shell",
+      "command": "node src/cli.mjs --label \"good first issue\" --days 30 --limit 15",
+      "problemMatcher": []
+    },
+    {
+      "label": "Radar: TypeScript help wanted",
+      "type": "shell",
+      "command": "node src/cli.mjs --query \"language:typescript\" --label \"help wanted\" --days 30 --limit 15",
+      "problemMatcher": []
+    }
+  ]
+}
