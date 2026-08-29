@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Contribution Radar",
+      "program": "${workspaceFolder}/src/cli.mjs",
+      "args": ["--label", "good first issue", "--days", "30", "--limit", "15"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
