@@ -1,0 +1,12 @@
+{
+  "jsonrpc": "2.0",
+  "id": "demo-1",
+  "method": "tools/call",
+  "params": {
+    "name": "http.fetch",
+    "arguments": {
+      "url": "https://docs.github.com/en/rest",
+      "method": "GET"
+    }
+  }
+}

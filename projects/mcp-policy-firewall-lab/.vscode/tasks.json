@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "MCP Firewall: tests", "type": "shell", "command": "npm test", "group": "test", "problemMatcher": [] },
+    { "label": "MCP Firewall: demo allow", "type": "shell", "command": "npm run demo:allow", "group": "build", "problemMatcher": [] },
+    { "label": "MCP Firewall: demo deny", "type": "shell", "command": "npm run demo:deny", "group": "build", "problemMatcher": [] }
+  ]
+}

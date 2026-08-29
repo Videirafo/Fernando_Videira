@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "default": "deny",
+  "tools": {
+    "files.read": {
+      "effect": "allow",
+      "constraints": {
+        "pathPrefixes": ["/workspace/docs", "/workspace/src"]
+      }
+    },
+    "http.fetch": {
+      "effect": "allow",
+      "constraints": {
+        "allowedDomains": ["api.github.com", "docs.github.com"],
+        "argumentAllowlist": {
+          "method": ["GET", "HEAD"]
+        }
+      }
+    },
+    "payments.create": {
+      "effect": "allow",
+      "constraints": {
+        "maxAmount": 100,
+        "approvalRequired": true
+      }
+    },
+    "shell.exec": {
+      "effect": "deny"
+    }
+  }
+}
