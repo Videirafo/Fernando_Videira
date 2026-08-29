@@ -1,5 +1,7 @@
 # RepoGuard GitHub App
 
+[![RepoGuard GitHub App](https://github.com/Videirafo/Fernando_Videira/actions/workflows/repoguard-github-app.yml/badge.svg?branch=main)](https://github.com/Videirafo/Fernando_Videira/actions/workflows/repoguard-github-app.yml)
+
 GitHub App funcional que recebe webhooks de Pull Request, aplica regras determinísticas e publica um resumo diretamente no PR.
 
 ## Por que existe
@@ -44,7 +46,7 @@ npm test
 npm run check
 ```
 
-Para rodar o webhook localmente, crie **somente na sua máquina** um `.env`/variáveis de ambiente com:
+Para rodar o webhook localmente, defina **somente na sua máquina/servidor autorizado**:
 
 ```text
 GH_APP_ID=<id do GitHub App>
@@ -57,24 +59,22 @@ PORT=3000
 
 ## Registrar o GitHub App
 
-No GitHub, registre um GitHub App com o menor conjunto de permissões necessário:
+Use o menor conjunto de permissões necessário:
 
 - Metadata: read;
 - Pull requests: read;
 - Issues: read & write, usado apenas para comentar no PR;
 - webhook event: Pull request.
 
-Configure `/webhook` como Webhook URL e use um segredo forte. Instale inicialmente apenas na própria conta/repositórios de teste.
+Configure `/webhook` como Webhook URL, use um segredo forte e instale inicialmente apenas na própria conta/repositórios de teste.
 
 ## VS Code
-
-Abra esta pasta diretamente:
 
 ```bash
 code projects/repoguard-github-app
 ```
 
-Tasks disponíveis: testes, syntax check e start. A configuração Run/Debug lê `.env` local, que nunca deve ser commitado.
+Tasks: testes, syntax check e start. A configuração Run/Debug lê `.env` local, que nunca deve ser commitado.
 
 ## Segurança
 
@@ -87,4 +87,4 @@ Tasks disponíveis: testes, syntax check e start. A configuração Run/Debug lê
 
 ## Próximo passo
 
-Depois de registrar o app e provar um webhook real, ele se torna um candidato concreto para demonstrar uso da GitHub API no **GitHub Developer Program**.
+Depois de registrar o app e provar um webhook real, ele se torna evidência concreta de uma integração usando a GitHub API para o **GitHub Developer Program**.
