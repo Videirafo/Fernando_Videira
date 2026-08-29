@@ -1,0 +1,17 @@
+{
+  "name": "open-source-contribution-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI para localizar e priorizar Issues públicas adequadas para contribuição open source real.",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "contribution-radar": "./src/cli.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/cli.mjs && node --check src/github.mjs && node --check src/rank.mjs && node --check src/format.mjs"
+  }
+}
