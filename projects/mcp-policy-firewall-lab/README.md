@@ -1,12 +1,12 @@
 # MCP Policy Firewall Lab
 
+[![MCP Policy Firewall Lab](https://github.com/Videirafo/Fernando_Videira/actions/workflows/mcp-policy-firewall.yml/badge.svg?branch=main)](https://github.com/Videirafo/Fernando_Videira/actions/workflows/mcp-policy-firewall.yml)
+
 Motor de políticas **default-deny** para avaliar chamadas de ferramentas em envelopes JSON-RPC no formato `tools/call` do MCP.
 
 > Este projeto é um **policy engine/lab**, não um proxy MCP drop-in e não implementa o protocolo MCP completo. Ele não executa ferramentas; apenas decide `allow` ou `deny` e explica por quê.
 
 ## Por que é diferente
-
-Agentes ganham poder quando recebem tools. Este lab coloca uma fronteira determinística entre intenção e execução:
 
 ```text
 Agent / Host
@@ -24,14 +24,14 @@ ALLOW / DENY + audit evidence
 
 ## Segurança demonstrada
 
-- **default deny** para tool desconhecida;
+- default deny para tool desconhecida;
 - bloqueio explícito de tools perigosas;
 - normalização de path contra traversal;
 - somente HTTPS + domínio exato permitido;
 - allowlist de valores de argumentos;
 - limites numéricos;
-- aprovação humana vem de contexto externo confiável (`--approved`), nunca de um argumento fornecido pela própria tool call;
-- annotations/hints não são tratados como autorização;
+- aprovação humana vem de contexto externo confiável (`--approved`), nunca de um argumento da própria tool call;
+- annotations/hints não são autorização;
 - nenhuma tool real é executada.
 
 ## Requisitos
@@ -48,47 +48,16 @@ npm run demo:deny
 npm run demo:approval
 ```
 
-Uma decisão manual:
-
 ```bash
-node src/cli.mjs \
-  --policy examples/policy.json \
-  --request examples/request-allowed.json \
-  --format json
+node src/cli.mjs --policy examples/policy.json --request examples/request-allowed.json --format json
+node src/cli.mjs --policy examples/policy.json --request examples/request-denied.json --audit
 ```
 
-Audit event:
-
-```bash
-node src/cli.mjs \
-  --policy examples/policy.json \
-  --request examples/request-denied.json \
-  --audit
-```
-
-O processo retorna `0` para allow, `2` para deny e `1` para erro de configuração/parsing.
-
-## Policy
-
-```json
-{
-  "tools": {
-    "http.fetch": {
-      "effect": "allow",
-      "constraints": {
-        "allowedDomains": ["api.github.com"],
-        "argumentAllowlist": { "method": ["GET", "HEAD"] }
-      }
-    }
-  }
-}
-```
+O processo retorna `0` para allow, `2` para deny e `1` para erro.
 
 ## MCP 2026
 
-O MCP TypeScript SDK v2 é a linha estável que implementa a revisão `2026-07-28`. Este projeto usa o formato conceitual `tools/call` para estudar a camada de policy enforcement, mas evita fingir que implementa transport, lifecycle, auth ou todo o wire protocol.
-
-Uma integração futura poderia colocar este motor entre um host e um servidor MCP real; essa integração deverá usar o SDK/spec oficial e terá seus próprios testes de transporte e autorização.
+O MCP TypeScript SDK v2 é a linha estável que implementa a revisão `2026-07-28`. Este projeto usa o formato conceitual `tools/call` para estudar policy enforcement sem fingir implementar transport, lifecycle, auth ou o wire protocol completo.
 
 ## VS Code
 
@@ -96,7 +65,7 @@ Uma integração futura poderia colocar este motor entre um host e um servidor M
 code projects/mcp-policy-firewall-lab
 ```
 
-Há tasks para testes e demos, além de uma configuração Run/Debug.
+Há tasks para testes e demos, além de Run/Debug.
 
 ## Próximas evoluções
 
@@ -106,8 +75,8 @@ Há tasks para testes e demos, além de uma configuração Run/Debug.
 - redaction de argumentos sensíveis no audit log;
 - OpenTelemetry;
 - property-based/fuzz tests;
-- modo proxy apenas quando houver implementação completa e interoperabilidade testada.
+- modo proxy somente com interoperabilidade completa testada.
 
 ## Privacidade
 
-Não há secrets, endpoints privados, tokens nem execução de ferramentas. Os exemplos usam apenas dados fictícios e domínios públicos.
+Não há secrets, endpoints privados, tokens nem execução de ferramentas. Os exemplos usam dados fictícios e domínios públicos.
