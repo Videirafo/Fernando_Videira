@@ -1,8 +1,19 @@
 <p align="center"><img src="./assets/banner.svg" alt="Fernando Videira engineering portfolio" width="100%" /></p>
 
-# Engineering Portfolio & Knowledge Base
+# Fernando Videira · Engineering Portfolio
 
-Portfólio técnico para organizar **software executável, arquitetura, skills reutilizáveis, decisões de engenharia e evolução open source**.
+**Engenharia de Software (2º/8) · AI Builder · Vibe Coder · SaaS · AI Agents**
+
+> ⚡ **Da faculdade para produção.**
+
+Portfólio técnico de um estudante de **Engenharia de Software** que constrói produtos reais e documenta o caminho entre ideia, arquitetura, código, testes, segurança, deploy e operação.
+
+Aqui ficam **software executável, arquitetura, skills reutilizáveis, decisões de engenharia, labs e evolução open source** — sem expor código privado, credenciais, clientes ou infraestrutura sensível.
+
+<p align="center">
+  <a href="https://github.com/Videirafo"><img alt="GitHub Profile" src="https://img.shields.io/badge/Profile-@Videirafo-111111?logo=github&logoColor=white"></a>
+  <a href="https://www.instagram.com/videirafo/"><img alt="Instagram @videirafo" src="https://img.shields.io/badge/Instagram-@videirafo-111111?logo=instagram&logoColor=white"></a>
+</p>
 
 <p align="center">
 <a href="https://github.com/Videirafo/Fernando_Videira/actions/workflows/portfolio-quality.yml"><img src="https://github.com/Videirafo/Fernando_Videira/actions/workflows/portfolio-quality.yml/badge.svg?branch=main" alt="Portfolio Quality" /></a>

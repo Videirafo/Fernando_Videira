@@ -4,7 +4,7 @@
 
 Melhorar reputação técnica, apresentação pública e contribuição open source. Achievements devem ser consequência de trabalho verificável — não de spam de commits, issues artificiais ou automações criadas apenas para inflar atividade.
 
-> Pesquisa revisada em 28/08/2026. O GitHub não expõe uma API pública confiável com o contador exato de cada achievement e o sistema continua em public preview. Critérios comunitários devem ser tratados como referência e validados periodicamente.
+> Roadmap atualizado em 05/10/2026. O GitHub não expõe uma API pública confiável com o contador exato de cada achievement. Critérios comunitários devem ser tratados como referência e validados periodicamente.
 
 ## O que o GitHub recomenda para um perfil profissional
 
@@ -25,24 +25,44 @@ Referências:
 - https://docs.github.com/en/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume
 - https://docs.github.com/en/account-and-profile/reference/profile-reference
 
-## Gap público atual
+## Estado público atual
 
-A auditoria da conta conectada mostrou apenas dois repositórios públicos próprios disponíveis para visitantes:
+A auditoria da conta conectada em 05/10/2026 encontrou **10 repositórios públicos próprios** e **9 privados**.
 
-- `Fernando_Videira`;
-- `Whazing-SaaS`.
+Repositórios públicos observados:
 
-Não alterar visibilidade de repositórios privados apenas para melhorar apresentação. A solução correta é criar novos projetos públicos projetados desde o início para compartilhamento.
+- `Videirafo` — Profile README oficial;
+- `Fernando_Videira` — portfólio técnico e labs;
+- `AI-Agent-Production-Checklist`;
+- `SaaS-Engineering-Playbook`;
+- `System-Modeling-Starter`;
+- `fitcore-pro`;
+- `saas-forge-ui`;
+- `vertical-Saas-radar`;
+- `Whazing-SaaS`;
+- `fork-commit-merge`.
 
-Meta de apresentação:
+Projetos proprietários como MarcaIA, ALMA, Pink e Videira MCP **não devem ser abertos apenas para melhorar o perfil**. A estratégia correta é mostrar cases sanitizados, screenshots, arquitetura, resultados e aprendizados sem expor código proprietário, credenciais, clientes ou infraestrutura sensível.
+
+Prioridade de apresentação:
 
 ```text
-3–5 pins públicos fortes
-+ Profile README
+5–6 pins públicos fortes
++ Profile README alinhado à marca pessoal
 + 1 projeto autoral com demo/release
-+ 1 projeto de conhecimento reutilizável
++ 2 projetos de conhecimento reutilizável
++ FitCore como produto público
 + contribuições externas verificáveis
 ```
+
+Pins recomendados:
+
+1. `fitcore-pro`;
+2. `AI-Agent-Production-Checklist`;
+3. `SaaS-Engineering-Playbook`;
+4. `System-Modeling-Starter`;
+5. `Fernando_Videira`;
+6. próximo projeto autoral visual com demo pública.
 
 ## Achievements priorizados
 
